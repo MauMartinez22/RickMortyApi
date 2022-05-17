@@ -1,0 +1,152 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,100;1,200;1,600&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montagu+Slab:opsz,wght@16..144,100;16..144,200;16..144,300;16..144,400;16..144,500;16..144,600;16..144,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  font-family: 'Lato', sans-serif;
+
+}
+
+body{
+ background-color: #1A3C40;
+}
+
+.app{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  padding: 5rem;
+  font-family: 'Noto Sans KR', sans-serif;  
+}
+
+.card{
+  width: auto;
+  height: auto;
+  padding: 1rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff44;
+  justify-content: space-between;
+}
+
+
+
+
+.card-content{
+  
+  margin: 2rem;
+  display: grid;
+  max-width: min-content;
+  max-height: min-content;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 40px;
+  grid-row-gap: 40px;
+}
+
+
+.banner{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 2rem;
+  height: 400px;
+  background-image: url("https://media.revistagq.com/photos/6266a08026711052931a9e24/master/pass/193-1939340_rick-and-morty-stills.png");
+  background-position: 60px;
+  filter: blur();
+}
+
+input{
+  background-color: #ffffffb1;
+  border: #00ffff00;
+  width: 700px;
+  height: 30px;
+  border-radius: 20px;
+  padding-left: 4rem;
+}
+
+
+
+button{
+  background-color: #61616165;
+  border-radius: 50px;
+  border: #00ffff00;
+  padding: 9.5px;
+  padding-top: 5px;
+  margin-left: -67px;
+  font-size: 1rem;
+ 
+}
+
+
+.planet-section{
+display: flex;
+flex-direction: column;
+align-items: center;
+background-color: #1D5C63;
+height: 250px;
+
+}
+
+.row-content{
+  display: flex;
+  flex-direction: row;
+  gap: 8rem;
+
+}
+.body{
+display: flex;
+justify-content: center;
+height: auto;
+}
+
+.footer{
+  height: 400px;
+  background-color: grey;
+}
+
+.info-content{
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+h3 , h2{
+  
+  font-size: 1.3rem;
+  color: #3d3d3d;
+}
+
+p{
+  font-size: 1.5rem;
+}
+
+
+.no-residents{
+  color: #000000;
+
+}
+
+.status-section{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #8f8f8f61;
+  margin: 0 -17px -17px -17px;
+}
+
+
+.planet-info{
+  text-align: center;
+}
+
+hr{
+  width: 100%;
+  height: .1rem;
+  margin-top: 1rem;
+  border-color: #a3a3a300;
+  border-radius: 50px;
+  background-color: #00e5ff;
+  
+}
