@@ -1,38 +1,37 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import '../App.css';
+import GetColor from './GetColor';
 
-const ResidentInfo = ({ url }) => {
-  const [character, setCharacter] = useState({})
-  const [dead, setDead] = useState(null)
+const ResidentInfo = ({resident}) => {
 
-
-  useEffect(() => {
-    axios.get(url)
-        .then((res) =>{
-          setCharacter(res.data)
-          
-        })
-    },[url])
     
 
-
-
-  return (
+    const [info,SetInfo]=useState({});
     
-      <div className="card">
-        <img src={character.image}/>
-        <hr></hr>
-        <h1>{character.name}</h1>
-        <h3>Origen:  </h3>
-          <p className="info-content">{character.origin?.name}</p>
-        <h3>Episodios:  </h3>
-          <p className="info-content">{character.episode?.length}</p>
-          <div className="status-section" >
-              <h2>{character.status}</h2>
-          </div>
-      </div>
+    useEffect(()=>{
+        axios.get(resident)
+        .then(res=>SetInfo(res.data))
+    },[resident])
     
-  )
-}
+    
 
-export default ResidentInfo
+    return (
+        <div className='card'>
+            <ul>
+                
+                <div className='card-image-container'>
+                    <img src={info.image} alt="" className='card-image' />
+                </div>
+                <li className='card-name'>
+                  <b>Name:</b>  {info.name}</li>
+                <li className='card-status'> <span className='status-icon' style={{background : GetColor(info.status)}} ></span><b>Status:</b>  {info.status}</li>
+                <li className='card-origin'><b>Origin:</b>  {info.origin?.name}</li>
+                <li className='card-episode'><b>Appearances in episodes:</b>  {info.episode?.length}</li>
+            </ul>
+            
+        </div>
+    );
+};
+
+export default ResidentInfo;

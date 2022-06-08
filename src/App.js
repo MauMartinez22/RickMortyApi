@@ -1,16 +1,9 @@
 import './App.css';
-import Location from './components/Location.js'
-import { useState } from 'react';
-import Mayo16 from './components/Mayo16.js'
-
-
-
+import Location from './components/Location'
 
 function App() {
-  
   return (
-    
-    <div>
+    <div className="App">
       <Location/>
     </div>
   );

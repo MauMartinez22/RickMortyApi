@@ -1,152 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montagu+Slab:opsz,wght@16..144,100;16..144,200;16..144,300;16..144,400;16..144,500;16..144,600;16..144,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;1,100;1,200;1,600&display=swap');
+.App {
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  
+}
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montagu+Slab:opsz,wght@16..144,100;16..144,200;16..144,300;16..144,400;16..144,500;16..144,600;16..144,700&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+ul{
+  list-style: none;
+}
+
 *{
-  font-family: 'Lato', sans-serif;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
 }
 
 body{
- background-color: #1A3C40;
-}
-
-.app{
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  padding: 5rem;
-  font-family: 'Noto Sans KR', sans-serif;  
-}
-
-.card{
-  width: auto;
-  height: auto;
-  padding: 1rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff44;
-  justify-content: space-between;
-}
-
-
-
-
-.card-content{
+ 
+  background: linear-gradient(72deg, #10c443 -30%, #0c3498 100%);
+  padding: 10px;
   
-  margin: 2rem;
-  display: grid;
-  max-width: min-content;
-  max-height: min-content;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 40px;
-  grid-row-gap: 40px;
+}
+.container-header-background{
+  background-size: cover ;
+  background-image: url('https://www.seriemaniac.com/wp-content/uploads/2020/10/rick-morty-juegos-de-mesa.jpeg') ;
+  height: 350px;
+  width: 100%;
+  background-position: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin: 0 auto;
+  border-radius: 1rem;
 }
 
 
-.banner{
+.search-bar{
+  position: relative;
+}
+
+.search-bar input{
+  border-radius: 50px;
+  height: 2rem;
+  border: 0;
+  margin-bottom: 5px;
+  width: 50rem ;
+  background-color: #ffffffc4;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #454545;
+  padding-left: 20px;
+}
+.search-bar button{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 32px;
+  border: none;
+  border-radius: 50px;
+  width: auto;
+  padding: 0 8px;
+  background-color: #000000aa;
+  color: #ffffff;
+}
+.search-bar button:hover{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 32px;
+  border: none;
+  border-radius: 50px;
+  width: auto;
+  padding: 0 8px;
+  background-color: #00ff22;
+  color: #000000;
+  font-weight: 600;
+}
+
+.container-location-info{
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  margin: 2rem;
-  height: 400px;
-  background-image: url("https://media.revistagq.com/photos/6266a08026711052931a9e24/master/pass/193-1939340_rick-and-morty-stills.png");
-  background-position: 60px;
-  filter: blur();
-}
-
-input{
-  background-color: #ffffffb1;
-  border: #00ffff00;
-  width: 700px;
-  height: 30px;
-  border-radius: 20px;
-  padding-left: 4rem;
-}
-
-
-
-button{
-  background-color: #61616165;
-  border-radius: 50px;
-  border: #00ffff00;
-  padding: 9.5px;
-  padding-top: 5px;
-  margin-left: -67px;
-  font-size: 1rem;
- 
-}
-
-
-.planet-section{
-display: flex;
-flex-direction: column;
-align-items: center;
-background-color: #1D5C63;
-height: 250px;
-
-}
-
-.row-content{
-  display: flex;
-  flex-direction: row;
-  gap: 8rem;
-
-}
-.body{
-display: flex;
-justify-content: center;
-height: auto;
-}
-
-.footer{
-  height: 400px;
-  background-color: grey;
-}
-
-.info-content{
-  font-size: 2rem;
-  margin-top: 0;
-}
-
-h3 , h2{
+  background-color: #4e4e4e9c;
+  color: white;
+  border-radius: 1rem;
+  padding: 20px;
+  font-size: 13px;
   
-  font-size: 1.3rem;
-  color: #3d3d3d;
+}
+.location-info>h1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 500;
+
 }
 
-p{
+.location-info-name{
+  margin-bottom: 1rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.content1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content1>h2{
+  font-weight: 400;
   font-size: 1.5rem;
 }
-
-
-.no-residents{
-  color: #000000;
-
+.content1>h3{
+  font-weight: 400;
+  font-size: 1.2rem;
 }
 
-.status-section{
+
+.location-info-general{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem ;
+}
+
+.container-residentInfo{
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.container-residentInfo h3{
+  margin-top: 5rem;
+  margin-bottom: -6rem;
+  font-size: 4rem;
+  font-weight: 300;
+}
+.card-section{
+  margin-top: 5rem ;
+  border-radius: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #8f8f8f61;
-  margin: 0 -17px -17px -17px;
+  padding: 2rem;
+}
+
+section.card-section > h1{
+
+  color: #ffffff;
+  font-size: 3.5rem;
+  font-weight: 500;
+  font-style: oblique;
 }
 
 
-.planet-info{
-  text-align: center;
-}
-
-hr{
-  width: 100%;
-  height: .1rem;
-  margin-top: 1rem;
-  border-color: #a3a3a300;
-  border-radius: 50px;
-  background-color: #00e5ff;
+.card{
+  margin-top: 19px;
+  background-color: #b4b4b47b;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  height: 30rem;
+  backdrop-filter: blur(10px);
   
+}
+
+.card-name{
+  color: #282828;
+  font-size: 1.5rem;
+  margin-bottom: -40px;
+  font-weight: 700;
+}
+.card-name>b{
+  font-size: 1.2rem;
+  color: #262626;
+  font-weight: 500;
+}
+
+.card-status{
+  position: relative;
+  top: -295px;
+  right: 2px;
+  max-width: 184px;
+  height: 47px;
+  border-radius: 20px 10px 10px 0px;
+  color: #262626;
+  display: flex;
+  background-color: #ffffff3a;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+.card-origin{
+  max-width: 308px;
+  margin-bottom: 8px;
+  color: #282828;
+  font-weight: 700;
+} 
+
+.card-origin>b{
+  font-size: 1.2rem;
+  color: #262626;
+  font-weight: 500;
+}
+.card-episode {
+  max-width: 308px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #282828;
+}
+.card-episode>b{
+  font-size: 1.2rem;
+  color: #262626;
+  font-weight: 500;
+}
+
+
+.card-image-container{
+  width: 100%
+}
+.card img{
+  border-radius: 15px;
+}
+.status-icon{
+  border-radius: 50%;
+  height: 16px;
+  margin: 0 0.25rem 0 0;
+  width: 16px;
+  display: inline-block;
+}
+
+
+
+
+
+
+.pagination-container ul li a{
+  text-decoration: none;
+  color:white ;
+}
+.pagination-container ul li a:hover{
+  text-decoration: none;
+}
+.pagination-container ul li{
+  font-size: 20px;
+  border: 2px solid #ffffff28;
+  padding: 1px 6px;
+  border-radius: 3px; 
+  margin: 0 -2px;
+}
+
+.pagination-container ul li button{
+  border: none;
+  font-size: 25px;
+  background-color: transparent;
+  color: rgb(227, 227, 227);
+  cursor: pointer;
+}
+.pagination-container ul li button:hover{
+  border: none;
+  font-size: 25px;
+  background-color: transparent;
+  color: #07cd00;
+  cursor: pointer;
+}
+
+.pagination-container ul{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 25px;
+  list-style: none;
+  padding: 5px;
+  border-radius: 1rem;
+  
+}
+.pagination-container{
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #58585800;
+  height:max-content;
+  backdrop-filter: blur(5px);
+  border-radius: .3rem;
+  margin-bottom: 5rem;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.loader-h1{
+  font-size: 2.5rem;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+
+}
+.loader{
+  width: 50%;
+  
+  border-radius: 50%; 
+  margin-top: 60%;
+}
+.suggestion-bar-container{
+  position: relative;
+}
+.suggestion-bar{
+  color: white;
+  position: absolute;
+  right:520px;
+  background-color:#ffffff;
+  width: 275px;
+  border-radius: 1rem;
+  padding: 12px;
+  height: 180px;
+  overflow-y: auto;
+  
+  
+}
+.suggestion-bar li{
+  cursor:pointer;
+  margin-bottom: 10px;
+  color: #000000;
+}
+
+.suggestion-bar li:hover{
+  color: #066515;
+}
+
+
+.footer{
+  display: none;
+  flex-direction: column;
+  background-color: #00ff22;
+  width: 100%;
+}
+
+
+
+
+
+
+@media screen and (min-width: 600px) {
+  .card-section {
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+  
+  }
+  .loader{
+    width: 60%;
+    
+    border-radius: 50%; 
+    margin-top: 10px;
+  }
+ 
 }
